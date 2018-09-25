@@ -1,6 +1,13 @@
-<h1>Users Index</h1>
+<!-- <h1>Users Index</h1>
 <ol>
   <% @users.each do |user| %>
   <li><a href='/users/<%= user.id %>'><%= user.name %></a></li>
+    <% end %>
+</ol> -->
+
+<h1>Users Index</h1>
+<ol>
+  <% @users.each do |user| %>
+  <li><%= link_to(user.name, "/users/#{user.id}") %></li>
     <% end %>
 </ol>
