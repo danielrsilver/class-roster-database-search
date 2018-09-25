@@ -5,7 +5,5 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @course = Course.find(@user.course_id)
-  rescue
-    "404"
   end
 end
